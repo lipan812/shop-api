@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fh.member.mapper.MemberMapper">
+
+    <!--<select id="getUserByName" resultType="member">
+        select * from t_member where name=#{name}
+    </select>-->
+
+    <insert id="addMember" parameterType="com.fh.member.model.Member">
+       insert into t_member (name,password,phone)
+       values (#{name},#{password},#{phone})
+    </insert>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<select id="queryBrandCount" resultType="java.lang.Long">
+        SELECT count(*) FROM mall_brand
+    </select>
+
+    <select id="queryBrandList" parameterType="PageBean" resultType="com.fh.model.Brand">
+        select * from mall_brand limit #{startIndex},#{pageSize}
+    </select>-->
+
+   <!-- <select id="typeList" resultType="com.fh.model.Type">
+        select * from t_type
+    </select>
+    <select id="pubList" resultType="com.fh.model.Publisher">
+        select * from t_publisher
+    </select>
+
+
+
+
+    <delete id="deleteBook" parameterType="int">
+         delete from t_book  where  bookId=#{bookId}
+    </delete>
+
+    <select id="getBookById" parameterType="int" resultType="com.fh.model.Book">
+        select * from t_book where bookId=#{bookId}
+    </select>
+
+    <update id="updateBook" parameterType="com.fh.model.Book">
+                update t_book t set t.bookName=#{bookName},t.bookPrice=#{bookPrice},t.xiaoliang=#{xiaoliang},t.kucun=#{kucun},t.publisher=#{publisher},t.bookType=#{bookType},t.pubdate=#{pubdate}
+                where t.bookId=#{bookId}
+    </update>-->
+
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fh.order.mapper.OrderMapper">
+
+    <select id="queryMyOrder" >
+        SELECT o.`name`,o.filePath,r.id,r.`status`,r.totalPrice,m.`name`,m.address FROM t_order_info o
+        LEFT JOIN t_order r on o.orderId=r.id
+        LEFT JOIN t_member m on r.addressId=m.id
+    </select>
+
+</mapper>
