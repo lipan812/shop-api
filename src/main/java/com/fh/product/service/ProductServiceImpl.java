@@ -20,8 +20,8 @@ public class ProductServiceImpl implements ProductService {
     public ServerResponse queryHotProductList() {
         QueryWrapper<Product> productQueryWrapper = new QueryWrapper<>();
         productQueryWrapper.eq("isHot",1);
-        List<Product> isHotProductList = productMapper.selectList(productQueryWrapper);
-        return ServerResponse.success(isHotProductList);
+        List<Product> isHotList = productMapper.selectList(productQueryWrapper);
+        return ServerResponse.success(isHotList);
     }
 
     @Override
